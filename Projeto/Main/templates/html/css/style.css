@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+body {
+    display: grid;
+    place-content: center;
+}
+
+.logo {
+    position: relative;
+    height: 92.5%;
+    margin: 0.5vh;
+    aspect-ratio: 1/1;
+}
+
+.popup-template {
+    width: 65vh;
+
+    background-color: #CCCCCC;
+
+    border-radius: 1vh;
+}
+
+.popup-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.popup-template header {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 4fr 1fr;
+
+    border-radius: 1vh 1vh 0 0;
+    box-shadow: 0px 0px 2vh rgba(0, 0, 0, 0.2);
+
+    background-color: #FFFFFF;
+}
+
+.popup-template form {
+    display: grid;
+    gap: 2vh;
+    grid-template-rows: repeat(1fr, 3);
+
+    padding: 5vh;
+}
+
+.popup-template form :where(input[type=email], input[type=password]) {
+    height: 5vh;
+
+    padding: 0 1vh 0 1vh;
+
+    background: #F8F8F8;
+    outline: none;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 0px 0.4vh 0.9vh rgba(0, 0, 0, 0.25);
+}
+
+.popup-template form :where(input[type=email], input[type=password])::placeholder {
+    overflow: hidden;
+    color: #7C7C7C;
+    text-overflow: ellipsis;
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-buttons input[type=submit] {
+    padding: 0 1vh 0 1vh;
+    height: 5vh;
+    outline: none;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 0px 0.4vh 0.9vh rgba(0, 0, 0, 0.25);
+}
+
+.login-buttons input[type=submit]::placeholder {
+    color: #393939;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.login-buttons a {
+    font-size: 2vh;
+}
+
+.service-buttons {
+    text-align: right;
+}
+
+.service-buttons input[type="submit"] {
+    display: inline-block;
+    background-color: #afafb1; 
+    color: #070707; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    box-shadow: 0px 0.4vh 0.9vh rgba(0, 0, 0, 0.25);
+}
+
+.centered-buttons {
+    text-align: center;
+    margin-top: 20px;
+    
+}
