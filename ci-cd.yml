@@ -1,0 +1,30 @@
+name: CI/CD para Django
+
+on:
+  push:
+    branches:
+      - main  # Defina a branch que aciona o CI/CD
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do Código
+      uses: actions/checkout@v2
+
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Instalar Dependências
+      run: |
+        pip install -r requirements.txt
+    - name: Executar Testes
+      run: |
+        python manage.py test
+
+    - name: Implantação (substitua com ação de implantação real)
+      run: |
+        echo "Implementação do código aqui"
